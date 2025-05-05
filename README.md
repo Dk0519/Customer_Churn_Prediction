@@ -77,7 +77,7 @@ python visualize_churn.py
 </ul>
 
 <h2>🤝 Let's Connect</h2>
-<p>Built with ❤️ by <strong>Your Name</strong><br>
+<p>Built with ❤️ by <strong>Divyanshu</strong><br>
 🌐 <a href="https://www.linkedin.com/in/divyanshu0519/" target="_blank">LinkedIn</a> |
 💼 <a href="https://my-portfolio-page-sage.vercel.app/" target="_blank">Portfolio</a></p>
 
