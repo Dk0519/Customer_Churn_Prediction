@@ -9,10 +9,6 @@
 
 <h1 align="center">🛒 Flipkart-style Customer Churn Prediction</h1>
 
-<div class="image-container">
-    <img src="https://media.giphy.com/media/your-summary-image-link/giphy.gif" alt="Project Summary">
-</div>
-
 <h2>🔍 About the Project</h2>
 <p>This project simulates a realistic customer churn prediction workflow for an e-commerce company like <strong>Flipkart</strong> or <strong>Amazon</strong>. We use <code>Faker</code> to generate realistic synthetic data, then analyze customer behavior to predict churn.</p>
 
@@ -59,17 +55,17 @@ python visualize_churn.py
 <h2>📸 Sample Visualizations</h2>
 
 <div class="image-container">
-    <img src="https://media.giphy.com/media/your-pie-chart-link/giphy.gif" alt="Churn Pie Chart">
+    <img src="images/pie_chart.png" alt="Churn Pie Chart">
     <p class="image-caption">📊 Pie chart showing churn vs active customers</p>
 </div>
 
 <div class="image-container">
-    <img src="https://media.giphy.com/media/your-scatterplot-link/giphy.gif" alt="Order vs Spend">
+    <img src="images/pie_chart.png" alt="Order vs Spend">
     <p class="image-caption">🎯 Scatter plot of order count vs total spend by churn</p>
 </div>
 
 <div class="image-container">
-    <img src="https://media.giphy.com/media/your-heatmap-link/giphy.gif" alt="Feature Correlation Heatmap">
+    <img src="images/pie_chart.png" alt="Feature Correlation Heatmap">
     <p class="image-caption">🔥 Heatmap showing feature correlation with churn</p>
 </div>
 
@@ -82,8 +78,8 @@ python visualize_churn.py
 
 <h2>🤝 Let's Connect</h2>
 <p>Built with ❤️ by <strong>Your Name</strong><br>
-🌐 <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
-💼 <a href="https://yourportfolio.com" target="_blank">Portfolio</a></p>
+🌐 <a href="https://www.linkedin.com/in/divyanshu0519/" target="_blank">LinkedIn</a> |
+💼 <a href="https://my-portfolio-page-sage.vercel.app/" target="_blank">Portfolio</a></p>
 
 </body>
 </html>
