@@ -65,7 +65,7 @@ python visualize_churn.py
 </div>
 
 <div class="image-container">
-    <img src="images/pie_chart.png" alt="Feature Correlation Heatmap">
+    <img src="images/heatmap.png" alt="Feature Correlation Heatmap">
     <p class="image-caption">🔥 Heatmap showing feature correlation with churn</p>
 </div>
 
