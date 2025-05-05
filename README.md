@@ -60,7 +60,7 @@ python visualize_churn.py
 </div>
 
 <div class="image-container">
-    <img src="images/pie_chart.png" alt="Order vs Spend">
+    <img src="images/scatter_plot.png" alt="Order vs Spend">
     <p class="image-caption">🎯 Scatter plot of order count vs total spend by churn</p>
 </div>
 
