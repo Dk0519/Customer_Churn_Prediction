@@ -3,17 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>🛒 Flipkart-style Customer Churn Prediction</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-        h1, h2, h3 { color: #2c3e50; }
-        pre { background-color: #f4f4f4; padding: 10px; border-left: 5px solid #3498db; overflow-x: auto; }
-        code { background-color: #f9f2f4; color: #c7254e; padding: 2px 4px; border-radius: 4px; }
-        .image-container { text-align: center; margin: 30px 0; }
-        .image-container img { width: 400px; border: 1px solid #ddd; border-radius: 4px; }
-        .image-caption { font-style: italic; font-size: 0.9em; }
-        ul { margin-left: 20px; }
-    </style>
+    
 </head>
 <body>
 
