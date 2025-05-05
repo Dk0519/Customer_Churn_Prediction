@@ -20,7 +20,7 @@
 
 <h2>📊 Features</h2>
 <ul>
-    <li>🧪 Data Simulation with Faker (300 customers, 50 products, 1000 transactions)</li>
+    <li>🧪 Data Simulation with Faker (500 customers, 50 products, 5000 transactions)</li>
     <li>📁 3 datasets: <code>customers.csv</code>, <code>products.csv</code>, <code>sales_data.csv</code></li>
     <li>🧠 Churn labeling using "no purchase in last 30 days"</li>
     <li>🔍 EDA + insightful visualizations with Seaborn & Matplotlib</li>
