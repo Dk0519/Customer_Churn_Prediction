@@ -1,7 +1,7 @@
 
 # 📦 Flipkart Customer Churn Prediction
 
-<img src="banner.png" alt="Flipkart Banner" style="width:100%; margin-bottom:20px;"/>
+<img src="https://1000logos.net/wp-content/uploads/2021/03/Flipkart-Logo-2011.png" alt="Flipkart Banner" style="width:100%; margin-bottom:20px;"/>
 
 This project is an end-to-end implementation of a customer churn prediction system for an e-commerce platform, **inspired by Flipkart**, using a real-world dataset from [Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
@@ -122,11 +122,15 @@ Visit: `http://localhost:8501`
 Flipkart_customer_Churn_Analysis/
 ├── data/
 │   └── *.csv (Olist dataset files)
+├── Notebooks
+    └── data_processing.ipynb
+    └── feature_engineering.ipynb
+└── images
 ├── flipkart_churn_model.pkl
-├── flipkart_churn_ui_enhanced.py
+├── flipkart_churn_Stramlit.py
 ├── model_training.py
 ├── README.md
-└── banner.png
+
 ```
 
 ---
