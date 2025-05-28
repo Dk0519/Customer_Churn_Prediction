@@ -120,12 +120,11 @@ Visit: `http://localhost:8501`
 
 ```
 Flipkart_customer_Churn_Analysis/
-├── data/
-│   └── *.csv (Olist dataset files)
+
 ├── Notebooks
     └── data_processing.ipynb
     └── feature_engineering.ipynb
-└── images
+├── images
 ├── flipkart_churn_model.pkl
 ├── flipkart_churn_Stramlit.py
 ├── model_training.py
