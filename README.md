@@ -1,85 +1,147 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
-</head>
-<body>
+# 📦 Flipkart Customer Churn Prediction
 
-<h1 align="center">🛒 Flipkart-style Customer Churn Prediction</h1>
+<img src="banner.png" alt="Flipkart Banner" style="width:100%; margin-bottom:20px;"/>
 
-<h2>🔍 About the Project</h2>
-<p>This project simulates a realistic customer churn prediction workflow for an e-commerce company like <strong>Flipkart</strong> or <strong>Amazon</strong>. We use <code>Faker</code> to generate realistic synthetic data, then analyze customer behavior to predict churn.</p>
+This project is an end-to-end implementation of a customer churn prediction system for an e-commerce platform, **inspired by Flipkart**, using a real-world dataset from [Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
-<h3>💼 Use Case</h3>
-<ul>
-    <li>🧠 <strong>Goal:</strong> Identify customers likely to churn based on their purchase patterns</li>
-    <li>📈 <strong>Impact:</strong> Enables targeted retention strategies and better customer lifetime value prediction</li>
-</ul>
+It includes:
+- Data preprocessing and feature engineering
+- Churn label creation
+- Model training with Random Forest
+- A visually rich Streamlit app for prediction
+- Ready-to-deploy files and UI customization using CSS
 
-<h2>📊 Features</h2>
-<ul>
-    <li>🧪 Data Simulation with Faker (500 customers, 50 products, 5000 transactions)</li>
-    <li>📁 3 datasets: <code>customers.csv</code>, <code>products.csv</code>, <code>sales_data.csv</code></li>
-    <li>🧠 Churn labeling using "no purchase in last 30 days"</li>
-    <li>🔍 EDA + insightful visualizations with Seaborn & Matplotlib</li>
-    <li>🤖 Ready for model training with features like <code>order_count</code>, <code>total_spent</code>, etc.</li>
-</ul>
+---
 
-<h2>📂 Project Structure</h2>
-<pre><code>flipkart_churn_prediction/
-│
-├── generate_dataset.py       # 📄 Generates realistic data using Faker
-├── churn_prediction.py       # 🤖 Computes churn labels and builds model
-├── visualize_churn.py        # 📊 Builds all churn-related plots
-│
-├── customers.csv             # 👥 Simulated customer data
-├── products.csv              # 📦 Product catalog
-├── sales_data.csv            # 🛒 Transactions log
-│
-└── README.html               # 📘 This file!
-</code></pre>
+## 🧠 Objective
 
-<h2>🚀 How to Run the Project</h2>
+To predict whether a customer is likely to churn based on their order behavior, delivery patterns, spending, and review activity.
 
-<h3>🛠 Requirements</h3>
-<pre><code>pip install pandas faker matplotlib seaborn</code></pre>
+---
 
-<h3>▶️ Steps</h3>
-<pre><code>python generate_dataset.py
-python churn_prediction.py
-python visualize_churn.py
-</code></pre>
+## 📁 Dataset
 
-<h2>📸 Sample Visualizations</h2>
+We use the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), which simulates realistic customer behavior on an e-commerce platform. The dataset includes:
 
-<div class="image-container">
-    <img src="images/pie_chart.png" alt="Churn Pie Chart">
-    <p class="image-caption">📊 Pie chart showing churn vs active customers</p>
-</div>
+| File Name | Description |
+|-----------|-------------|
+| `olist_orders_dataset.csv` | Orders with timestamps and status |
+| `olist_customers_dataset.csv` | Customer IDs and location info |
+| `olist_order_reviews_dataset.csv` | Review scores per order |
+| `olist_order_payments_dataset.csv` | Payment method and amount |
+| `olist_order_items_dataset.csv` | Items and delivery info per order |
+| `olist_products_dataset.csv` | Product categories |
+| `olist_sellers_dataset.csv` | Seller details |
+| `olist_geolocation_dataset.csv` | Customer/seller location (lat/lon) |
 
-<div class="image-container">
-    <img src="images/scatter_plot.png" alt="Order vs Spend">
-    <p class="image-caption">🎯 Scatter plot of order count vs total spend by churn</p>
-</div>
+---
 
-<div class="image-container">
-    <img src="images/heatmap.png" alt="Feature Correlation Heatmap">
-    <p class="image-caption">🔥 Heatmap showing feature correlation with churn</p>
-</div>
+## 🧾 Dataset Schema (Placeholders)
 
-<h2>📌 Next Steps</h2>
-<ul>
-    <li>✅ Add ML models (Random Forest, Logistic Regression)</li>
-    <li>✅ Build a dashboard (Power BI / Streamlit)</li>
-    <li>🔄 Automate retraining on new data</li>
-</ul>
+> 📌 Add your dataset schema table or ER diagram here (placeholder)
 
-<h2>🤝 Let's Connect</h2>
-<p>Built with ❤️ by <strong>Divyanshu</strong><br>
-🌐 <a href="https://www.linkedin.com/in/divyanshu0519/" target="_blank">LinkedIn</a> |
-💼 <a href="https://my-portfolio-page-sage.vercel.app/" target="_blank">Portfolio</a></p>
+```
+[ SCHEMA_IMAGE_PLACEHOLDER ]
+```
 
-</body>
-</html>
+---
+
+## 🔍 Churn Definition
+
+**Churned**: Customers who have not placed an order in the last 90 days.
+
+We label churn using the `order_purchase_timestamp` and calculate days since the last order.
+
+---
+
+## 🛠 Feature Engineering
+
+| Feature | Description |
+|--------|-------------|
+| `total_orders` | Total orders by the customer |
+| `avg_review_score` | Mean review rating |
+| `avg_order_value` | Avg. payment amount per order |
+| `avg_delivery_time` | Avg. delivery duration |
+| `days_since_last_order` | Days since the customer last ordered |
+
+---
+
+## 🤖 Model Training
+
+- Algorithm: **Random Forest Classifier**
+- Train/test split: 70/30
+- Evaluation: Accuracy, Confusion Matrix, Classification Report
+- Exported model with `joblib` to use in the app
+
+---
+
+## 💻 Streamlit App (Interactive UI)
+
+### ✨ Features:
+- 5 input fields
+- CSS-enhanced layout with icons and columns
+- Real-time churn prediction with probability
+- Easy to extend and deploy
+
+### 📷 UI Snapshots (Placeholders)
+
+#### 🖼️ Home Page
+```
+[ HOME_PAGE_SNAPSHOT ]
+```
+
+#### 🖼️ Prediction Result
+```
+[ RESULT_SNAPSHOT ]
+```
+
+---
+
+## 🧾 How to Run the App
+
+### 🛠 1. Train the model
+```bash
+python model_training.py
+```
+
+### 🚀 2. Launch the app
+```bash
+streamlit run flipkart_churn_ui_enhanced.py
+```
+
+### 📦 3. Web Interface
+
+Visit: `http://localhost:8501`
+
+---
+
+## 🧑‍💻 Folder Structure
+
+```
+Flipkart_customer_Churn_Analysis/
+├── data/
+│   └── *.csv (Olist dataset files)
+├── flipkart_churn_model.pkl
+├── flipkart_churn_ui_enhanced.py
+├── model_training.py
+├── README.md
+└── banner.png
+```
+
+---
+
+## 📝 Future Enhancements
+
+- Add more behavioral and product features
+- Deploy on Streamlit Cloud or HuggingFace Spaces
+- Batch prediction via CSV upload
+- SHAP explanations for model interpretability
+
+---
+
+## 🙌 Credits
+
+- Dataset: [Olist @ Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+- UI Inspiration: Flipkart Web App
+- Built by: [Your Name Here]
