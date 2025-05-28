@@ -39,7 +39,7 @@ We use the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/
 
 ## 🧾 Dataset Schema (Placeholders)
 
-> 📌 Add your dataset schema table or ER diagram here (placeholder)
+<img src="https://i.imgur.com/HRhd2Y0.png" alt="Schema"/>
 
 ```
 [ SCHEMA_IMAGE_PLACEHOLDER ]
