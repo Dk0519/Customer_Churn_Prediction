@@ -86,12 +86,11 @@ We label churn using the `order_purchase_timestamp` and calculate days since the
 
 
 #### 🖼️ Prediction Result
-```
+
 ![Alt text](images/output.png)
 
-```
 
----
+
 
 ## 🧾 How to Run the App
 
