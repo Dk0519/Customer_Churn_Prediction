@@ -140,5 +140,5 @@ Flipkart_customer_Churn_Analysis/
 ## 🙌 Credits
 
 - Dataset: [Olist @ Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- UI Inspiration: Flipkart Web App
-- Built by: [Your Name Here]
+
+- Built by: Divyanshu Kumar
