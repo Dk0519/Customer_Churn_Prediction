@@ -41,12 +41,6 @@ We use the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/
 
 <img src="https://i.imgur.com/HRhd2Y0.png" alt="Schema"/>
 
-```
-[ SCHEMA_IMAGE_PLACEHOLDER ]
-```
-
----
-
 ## 🔍 Churn Definition
 
 **Churned**: Customers who have not placed an order in the last 90 days.
@@ -87,13 +81,14 @@ We label churn using the `order_purchase_timestamp` and calculate days since the
 ### 📷 UI Snapshots (Placeholders)
 
 #### 🖼️ Home Page
-```
-[ HOME_PAGE_SNAPSHOT ]
-```
+
+![Alt text](images/Homepage.png)
+
 
 #### 🖼️ Prediction Result
 ```
-[ RESULT_SNAPSHOT ]
+![Alt text](images/output.png)
+
 ```
 
 ---
