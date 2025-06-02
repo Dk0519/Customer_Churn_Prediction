@@ -1,7 +1,6 @@
 
-# 📦 Flipkart Customer Churn Prediction
+#  Customer Churn Prediction
 
-<img src="https://1000logos.net/wp-content/uploads/2021/03/Flipkart-Logo-2011.png" alt="Flipkart Banner" style="width:100%; margin-bottom:20px;"/>
 
 This project is an end-to-end implementation of a customer churn prediction system for an e-commerce platform, **inspired by Flipkart**, using a real-world dataset from [Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
