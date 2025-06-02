@@ -37,7 +37,7 @@ We use the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/
 
 ---
 
-## 🧾 Dataset Schema (Placeholders)
+## 🧾 Dataset Schema
 
 <img src="https://i.imgur.com/HRhd2Y0.png" alt="Schema"/>
 
