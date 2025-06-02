@@ -68,6 +68,93 @@ We label churn using the `order_purchase_timestamp` and calculate days since the
 - Exported model with `joblib` to use in the app
 
 ---
+## 🤖 Modeling Approach
+
+This project followed a step-by-step modeling journey to reach an optimal balance between **model accuracy**, **recall**, and **business interpretability**.
+
+### 🔹 Baseline Models
+
+We started with simple, interpretable models:
+
+- **Logistic Regression** – Used as a performance baseline  
+- **Random Forest** – Performed better but slightly overfit due to class imbalance  
+
+These models provided initial benchmarks but struggled with imbalanced data, especially on recall (i.e., identifying true churners).
+
+---
+
+### 🔹 Addressing Class Imbalance
+
+Churners made up ~11% of the dataset, creating severe imbalance. To resolve this:
+
+- ✅ Applied **SMOTE** (Synthetic Minority Over-sampling Technique)  
+- ✅ Used **class\_weight="balanced"** where supported  
+- ✅ Implemented **Stratified Cross-Validation** during tuning  
+
+---
+
+### 🔹 Gradient Boosting Models
+
+After addressing imbalance, we moved to ensemble boosting algorithms:
+
+- **AdaBoost**: Improved over Random Forest, better on noisy samples  
+- **Gradient Boosting**: Balanced performance with strong recall  
+- **XGBoost**: Final model selected for best F1-score and flexibility  
+
+---
+
+### ✅ Why XGBoost?
+
+- Handles class imbalance using `scale_pos_weight`  
+- Provides regularization to prevent overfitting  
+- Excellent precision-recall balance  
+- SHAP compatibility for interpretability  
+
+---
+
+### 📊 Model Performance
+
+| Model              | F1-Score | ROC-AUC | Precision | Recall |
+|--------------------|----------|---------|-----------|--------|
+| Logistic Regression| 0.45     | 0.68    | 0.63      | 0.39   |
+| Random Forest      | 0.58     | 0.72    | 0.71      | 0.49   |
+| AdaBoost           | 0.60     | 0.73    | 0.76      | 0.51   |
+| **XGBoost (Final)**| **0.64** | **0.75**| 0.84      | **0.52** |
+
+> 🎯 We prioritized **recall** over raw accuracy to reduce missed churners and maximize customer retention impact.
+
+---
+
+### 🔹 Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+---
+
+### 🔹 Model Comparison
+
+![Model Comparison](images/model_comparison.png)
+
+---
+
+### 🔹 Feature Importance (XGBoost)
+
+![Feature Distribution](images/feature_distribution.png)
+
+**Top Features**:
+- `days_since_last_order`
+- `avg_review_score`
+- `total_orders`
+- `avg_payment_value`
+
+---
+
+### 📌 Evaluation Summary
+
+- 🚀 XGBoost achieved the best overall F1-score while maintaining high precision
+- 🧠 Feature importance and optional SHAP plots confirmed model interpretability
+- 🔍 False negatives were minimized to avoid losing actual churners
+
 
 ## 💻 Streamlit App (Interactive UI)
 
