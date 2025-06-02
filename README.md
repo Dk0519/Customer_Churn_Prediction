@@ -100,7 +100,7 @@ python model_training.py
 
 ### 🚀 2. Launch the app
 ```bash
-streamlit run flipkart_churn_ui_enhanced.py
+streamlit run flipkart_churn_ui.py
 ```
 
 ### 📦 3. Web Interface
